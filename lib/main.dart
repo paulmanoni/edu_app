@@ -33,7 +33,7 @@ class MyHomePage extends StatelessWidget {
           padding: const EdgeInsets.only(right: 16.0, bottom: 32),
           child: Container(
             child: Text(
-              "Get Startted",
+              "Get Started",
               style: TextStyle(
                   color: Color(0xffE1F5FF),
                   fontSize: 18,

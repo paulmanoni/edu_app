@@ -1,4 +1,5 @@
 import 'package:edu_app/recently.dart';
+import 'package:edu_app/subjects.dart';
 import 'package:flutter/material.dart';
 
 class Resources extends StatelessWidget {
@@ -86,13 +87,13 @@ class Resources extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(12))),
-                              color: Color(0xffeef1f3),
+                              color: Color.fromRGBO(6, 44, 76, 1),
                               onPressed: () {},
                               child: Center(
                                 child: Icon(
                                   Icons.search,
                                   size: 20,
-                                  color: Colors.black,
+                                  color: Colors.white,
                                 ),
                               )),
                         ),
@@ -137,7 +138,10 @@ class Resources extends StatelessWidget {
                               letterSpacing: 1.9,
                               fontWeight: FontWeight.bold),
                         ),
-                        onPressed: (){},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => Subjects()));
+                        },
                       )
                     ],
                   ),
@@ -149,7 +153,11 @@ class Resources extends StatelessWidget {
                     itemCount: 3,
                     shrinkWrap: true,
                     itemBuilder: (BuildContext context, int index) {
-                      return CourseCard("Figma Design", "24", "assets/1.jpg");
+                      return InkWell(
+                        child: CourseCard("Figma Design", "24", "assets/1.jpg"),
+                        onTap: () {},
+                        borderRadius: BorderRadius.circular(15),
+                      );
                     },
                   ),
                 ),
