@@ -47,7 +47,7 @@ class _SubjectsState extends State<Subjects> {
                               ],
                             ),
                             SizedBox(
-                              height: 30,
+                              height: 25,
                             ),
                             Text(
                               "All Subjects",
